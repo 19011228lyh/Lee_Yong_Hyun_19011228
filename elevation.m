@@ -6,8 +6,8 @@ function el = elevation(ENU, el_mask)
 
 for i = 1:size(ENU,1)
 
- el(1,i)=asin((ENU(i,3))/sqrt((ENU(i,1)^2)+(ENU(i,2))^2+(ENU(i,3)^2)))*180/pi;
- if el(1,i) < el_mask
+ el(1,i)=asin((ENU(i,3))/sqrt((ENU(i,1)^2)+((ENU(i,2))^2)+(ENU(i,3)^2)))*180/pi;
+  if el(1,i) < el_mask
      el(1,i)=NaN;
  end
 end

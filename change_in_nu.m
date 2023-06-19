@@ -1,8 +1,8 @@
 function nu=change_in_nu(a_of_orbit,e_of_orbit,toc,T,M0)
 
 mu=3.986064418*(10^5);
-
-[h,m,s]=hms(datetime(T)-datetime(toc));
+TT=datetime(T)-datetime(toc);
+[h,m,s]=hms(TT);
 
 M=sqrt(mu/((a_of_orbit)^3))*(3600*h+m*60+s)+(M0*pi/180); %second 단위변환
 E=M;
